@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кто мы?</title>
+  <link rel="icon" href="images\logo.svg" type="image/png" />
+  <link rel="stylesheet" href="styles\style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <script src="js\script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    var scr = $(".services-container");
+    scr.mousedown(function () {
+      var startX = this.scrollLeft + event.pageX;
+      var startY = this.scrollTop + event.pageY;
+      scr.mousemove(function () {
+        this.scrollLeft = startX - event.pageX;
+        this.scrollTop = startY - event.pageY;
+        return false;
+      });
+    });
+    $(window).mouseup(function () {
+      scr.off("mousemove");
+    });
+  }
+
+</script>
+  </head>
+<body>
+  <header>
+    <div class="navigation">
+      <ul class="nav-links">
+        <li><a href="who-are-we.html" class="nav-link">КТО МЫ?</a></li>
+        <li><a href="our-services.html" class="nav-link" style="margin-left: 50px;">НАШИ УСЛУГИ</a></li>
+        <li><a href="kodex-pravok.html" class="nav-link" style="margin-left: 50px;">КОДЕКС ПРАВОК</a></li>
+      </ul>
+    </div>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="images\logo.svg" alt="">
+      </a>
+    </div>
+    <div class="nav-question">
+      <p>
+        Есть вопросы? Задавайте :)
+      </p>
+      <a class="js-open-modal" data-modal="3" href="">
+        <img src="images\nav-question-white.svg" alt="">
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sections">
+      
+      <div class="section section0">
+  
+        <div class="content-3">
+          <h1>Дизайновые Пацаны</h1>
+          <div class="nras">
+            <p style="margin-bottom: 40px;">
+            Мы – команда дизайнеров, которая любит запускать проекты в лоукост-формате, точно рассчитывать сроки, быть на связи и
+            кропотливо прорабатывать детали.
+            </p>
+            <p>
+            Помогаем вести бизнес красиво и удобно. Работаем с теми, кто чтит мнение дизайнера.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="section section1">
+        <div class="content-3">
+          <h1>Лоукост-формат</h1>
+          <div class="nras">
+            <p style="margin-bottom: 40px;">
+              Мы используем тот же самый формат работы, что и авиакомпании-лоукостеры. Они продают билеты с дополнительными услугами,
+              а мы – дизайн.
+            </p>
+            <p>
+              Все работает также: мы минимизируем издержки разработки и разделяем продукт на дополнительные услуги, а вы можете
+              заказать разработку конкретной части продукта за приемлемую цену.
+            </p>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="section section2">
+
+    <div class="services">
+      <h1>Чем мы занимаемся?</h1>
+      <div class="services-container">
+        <div class="services-links">
+          <div class="service" style="margin-left: 0px;">
+            <img class="service-img" src="images\usluga-1.svg" alt="">
+            <p class="service-name-disable">Скоро появится</p>
+          </div>
+          <div class="service">
+            <a class="service-link" href="index.html">
+              <img class="service-img" src="images\usluga-2.svg" alt="">
+              <p class="service-name">Редизайн сайта</p>
+            </a>
+          </div>
+          <div class="service">
+            <img class="service-img" src="images\usluga-3.svg" alt="">
+            <p class="service-name-disable">Скоро появится</p>
+          </div>
+          <div class="service">
+            <img class="service-img" src="images\usluga-4.svg" alt="">
+            <p class="service-name-disable">Скоро появится</p>
+          </div>
+          <div class="service">
+            <img class="service-img" src="images\usluga-1.svg" alt="">
+            <p class="service-name-disable">Скоро появится</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+      </div>
+
+
+    </div>
+  </div>
+
+<div class="modal" data-modal="3">
+  <!--   Svg иконка для закрытия окна  -->
+  <div class="modal-head">
+    <svg class="modal__cross js-modal-close" width="20" height="20" viewBox="0 0 20 20" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M12.0199 10L19.5811 2.43884C20.1396 1.88029 20.1396 0.977465 19.5811 0.418914C19.0225 -0.139638 18.1197 -0.139638 17.5612 0.418914L10 7.98007L2.43884 0.418914C1.88029 -0.139638 0.977465 -0.139638 0.418914 0.418914C-0.139638 0.977465 -0.139638 1.88029 0.418914 2.43884L7.98007 10L0.418914 17.5612C-0.139638 18.1197 -0.139638 19.0225 0.418914 19.5811C0.697475 19.8596 1.06318 19.9996 1.42888 19.9996C1.79458 19.9996 2.16028 19.8596 2.43884 19.5811L10 12.0199L17.5612 19.5811C17.8397 19.8596 18.2054 19.9996 18.5711 19.9996C18.9368 19.9996 19.3025 19.8596 19.5811 19.5811C20.1396 19.0225 20.1396 18.1197 19.5811 17.5612L12.0199 10Z"
+        fill="white" />
+    </svg>
+  </div>
+  <div class="write-us">
+    <h1>Напишите нам</h1>
+    <p style="margin-bottom: 40px;">там, где вам удобнее!</p>
+    <a style="margin-bottom: 20px;" class="write-us-link" href=""><img style="width: 18px; height: 15px;"
+        src="images\Telegram.svg" alt="">designboys</a>
+    <a style="margin-bottom: 40px;" class="write-us-link" href=""><img src="images\Email.svg"
+        alt="">hello@designboys.com</a>
+    <p>На связи <b>Пн-Пт, 10:00-19:00 (МСК)</b></p>
+  </div>
+</div>
+
+
+<!-- Подложка под модальным окном -->
+<div class="overlay js-overlay-modal"></div>
+
+
+
+
+<link rel="stylesheet" href="src/jquery.fsscroll.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="src/jquery.fsscroll.js"></script>
+<!-- инициализировать и пример применения параметров-->
+<script>
+  $('.container').fsScroll({
+    direction: 'vertical',
+    duration: 1,
+    keyboard: true,
+  })
+</script>
+  <footer>
+    <div class="social-icons">
+      <a href="#" class="social-icon-link"><img src="images\Telegram.svg" alt="" class="social-icon"></a>
+      <a href="#" class="social-icon-link"><img src="images\Instagram.svg" alt="" class="social-icon"></a>
+    </div>
+    <div class="animation-scroll">
+      <img src="images\Scroll.svg" alt="">
+    </div>
+    <div class="burokratia">
+      <a href="burokratia.html" class="bur-link">БЮРОКРАТИЯ</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редизайн сервиса Scraps</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles\style_for_primer_page.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-git.min.js"></script>
+  <script>
+    function setOpacity() {
+      var el = document.getElementsByClassName("maket")[0];
+      var op = 0.25;
+      setTimeout(function func() {
+        if (op > 1)
+          return;
+        el.style.opacity = op;
+        op += 0.01;
+        setTimeout(func, 6);
+      }, 6);
+      var el1 = document.getElementsByClassName("how-was_btn")[0];
+      var op1 = 1;
+      setTimeout(function func1() {
+        if (op < 0) {
+          el1.style.display = "none";
+          return;
+        }
+        el1.style.opacity = op;
+        op1 -= 0.01;
+        setTimeout(func1, 600);
+      }, 600);
+      el1.style.display = "none";
+      document.getElementsByClassName("how-was")[0].style.overflowY = "auto";
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <a class="gohome-link" href="/">
+        <img src="images\return-home.svg" alt="">
+        <p>На главную</p>
+      </a>
+    </header>
+
+    <div class="content line">
+      <div class="content-main_column">
+        <h1>SCRAPS</h1>
+        <h3>Редизайн интерфейса сервиса заметок</h3>
+      </div>
+      <div class="content-secondary_column">
+        <h1>Задачи</h1>
+        <p>Упорядочить структуру, вынести на видное место все основные параметры вина, обновить карточки товара, наглядно показать
+        акции на.</p>
+      </div>
+    </div>
+
+    <div class="content" style="margin-bottom: 80px;">
+      <div class="content-main_column">
+        <h2>Старая карточка</h2>
+      </div>
+      <div class="content-secondary_column">
+        <h1>Проблемы</h1>
+        <p>Низкая конверсия сайта, покупатели сообщали о неудобном функционале страницы и расположении контента, проблемы с
+        контрастностью.</p>
+      </div>
+      <div class="content-secondary_column">
+        <h1>Сложности</h1>
+        <p>Большой объем контента: покупатель должен сразу видеть большой список винтажей вина, их рейтинг и перечень винотек, где
+        можно приобрести вино.</p>
+      </div>
+    </div>
+
+
+    <div class="how-was_container">
+      <a class="how-was_btn" onclick="setOpacity()">
+        <img src="images\remove_eye.svg" alt="">Как было</a>
+      <div class="how-was">
+        <img class="maket" src="images\wineport-maket.png" alt="">
+      </div>
+    </div>
+
+    <div class="content line">
+      <div class="content-main_column">
+        <h2>Процесс</h2>
+      </div>
+      <div class="content-secondary_column">
+        <h1>Сначала, как обычно...</h1>
+        <p>
+          • Выявили недостатки текущего сайта;<br>
+          • Изучили целевую аудиторию;<br>
+          • Разобрали сайты конкурентов;<br>
+          • Подобрали крутые референсы.<br>
+        </p>
+      </div>
+      <div class="content-secondary_column">
+        <h1>Какие услуги применяли:</h1>
+        <p>• Редизайнили текущий контент;<br>
+          • Внесение правок (1 итерация)</p>
+      </div>
+    </div>
+
+    <div class="content" style="margin-bottom: 80px;">
+      <div class="content-main_column">
+        <h2>Новая карточка</h2>
+      </div>
+      <div class="content-secondary_column-long">
+
+        <p>Привели шапку и меню в порядок, дали прямой доступ к основным разделам каталога, логически разделили
+          параметры товара,
+          выделили винтажи, рейтинги вина и добавили
+          им подсказки. Поработали над визуальной составляющей: исправили проблемы
+          с контрастностью, улучшили читаемость текста, проработали отступы, добавили графическое обозначение
+          происхождению вина.<br>
+        </p>
+      </div>
+    </div>
+
+    <div class="how-was" style="margin-bottom: 80px;">
+      <img class="new-maket" src="images\wineport-maket.png" alt="">
+    </div>
+
+    <div class="collage">
+      <img src="images\wineport-collage.png" alt="">
+    </div>
+
+    <footer>
+      <div class="prev">
+        <a href="nice.html">
+          <img src="images\swiper-prev.svg" alt="">
+          <p>Предыдущий кейс</p>
+        </a>
+      </div>
+      <a href="" class="want-redesign">Тоже хочу редизайн</a>
+      <div class="next">
+        <a href="wineport.html">
+          <p>Следующий кейс</p>
+          <img src="images\swiper-next.svg" alt="">
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

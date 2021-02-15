@@ -1,0 +1,303 @@
+:root{
+  --black: #24282b;
+  --blue:  #7170FF;
+}
+
+* {
+  font-family: Montserrat;
+  padding: 0;
+  margin: 0;
+  background-color: var(--black);
+  color: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin-left: 3.125vw;
+  margin-right: 3.125vw;
+  margin-top: 5.5vh;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.nav-logo {
+  /*margin-right: 5.21vw;*/
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+}
+.nav-question {
+  display: flex;
+  align-items: center;
+}
+.nav-question p {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-right: 20px;
+  letter-spacing: 0.02em;
+}
+.kodex{
+  margin-top: 124px;
+  border-bottom: 1px solid #343A40;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+.kodex .left{
+  width: 600px;
+}
+.kodex .left h1{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 140%;
+  /* or 49px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin-bottom: 77px;
+}
+.kodex .left img{
+  width: 375px;
+  height: 500px;
+  margin-bottom: 37px;
+}
+.kodex .left p{
+  width: 375px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 160%;
+  /* or 21px */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.kodex .right p{
+  width: 500px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  /* or 24px */
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.primer{
+  margin-top: 120px;
+  border-bottom: 1px solid #343A40;
+  display: flex;
+  justify-content: space-between;
+}
+.primer .left{
+  width: 465px;
+}
+.primer .left h1{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  margin-bottom: 130px;
+}
+.primer .right{
+  width: 500px;
+}
+.primer .right p{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+}
+.end{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.end .left h1{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+.end .right{
+  width: 500px;
+}
+.end .right p{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+}
+.pageUp{
+  position: fixed;
+  right: 60px;
+  bottom: 60px;
+  display: none;
+  cursor: pointer;
+}
+
+
+/* модальное окно */
+/* Стили для подложки */
+.container-modal{
+  max-width: 1500px;
+  margin: auto;
+}
+.overlay {
+   /* Скрываем подложку  */
+   opacity: 0;
+   visibility: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--black);
+   z-index: 20;
+   transition: .3s all;
+}
+
+
+/* Стили для модальных окон */
+
+.modal {
+   
+   /* Скрываем окна  */
+   opacity: 0;
+   visibility: hidden;
+   
+   
+   /*  Установаем ширину окна  */
+   width: 100%;
+   max-width: 100%;
+   height: 100%;
+   /*  Центрируем и задаем z-index */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 30; /* Должен быть выше чем у подложки*/
+   
+   /*  Побочные стили   */
+   background-color: var(--black);
+   transition: 0.3s all;
+}
+
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+   width: 20px;
+   height: 20px;
+   color: #fff;
+   cursor: pointer;
+   margin-bottom: 3.333vh;
+}
+
+.modal-head{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5.5vh !important;
+  max-width: 1800px;
+  margin-bottom: 1.296296296296296vh !important;
+  margin: auto;
+}
+
+
+.write-us{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+}
+.write-us h1{
+font-style: normal;
+font-weight: 500;
+font-size: 35px;
+line-height: 140%;
+letter-spacing: 0.02em;
+color: #FFFFFF;
+margin-bottom: 30px;
+}
+.write-us-link{
+  background-color: #2C3135;
+  border-radius: 5px;
+  text-decoration: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  height: 50px;
+}
+.write-us-link img{
+  padding-left: 20px;
+  padding-right: 17px;
+  background-color: #2C3135;
+}
+
+.right h5{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  margin-top: 80px;
+  width: 496px;
+}
+.buro-ab{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  margin-top: 40px;
+}
+.buro-ab a{
+  color: #ff3f3f;
+  text-decoration: none;
+}
+
